@@ -2,17 +2,22 @@ import math
 
 def greet_user():
     #Asks for user input
-    user = input('Enter your name: ')
+    user = input("Enter your name: ")
     print("Hello " + user + "!")
 
 def circle_area():
     #Asks user to enter radius
-    radius = float(input('Enter a radius: '))
+    radius = float(input("Enter a radius: "))
     area = math.pi * radius ** 2
     print("The area is: " + str(area))
 
-def rectangle_height():
-    pass
+def rectangle_perimeter():
+    height = float(input("Enter height: "))
+    length = float(input("Enter length: "))
+    #Calculates both sides and multiplies sum to get perimeter of a rectangle
+    area = (height + length) * 2
+    print(f"{height} + {length} x 2 is: {str(area)}")
+
 def add_values():
     pass
 def mass_converter():
@@ -37,7 +42,7 @@ def main():
         elif choice == "2":
             circle_area()
         elif choice == "3":
-            rectangle_height()
+            rectangle_perimeter()
         elif choice == "4":
             add_values()
         elif choice == "5":
