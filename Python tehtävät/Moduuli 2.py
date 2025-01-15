@@ -62,10 +62,17 @@ def random_generator():
     digit1 = random.randint(0, 9)
     digit2 = random.randint(0, 9)
     digit3 = random.randint(0, 9)
+    three_digit_code = str(digit1) + str(digit2) + str(digit3) # combine three random digits
 
-    three_digit_code = digit1 + digit2 + digit3 # combine random digits
+    digit4 = random.randint(1, 6)
+    digit5 = random.randint(1, 6)
+    digit6 = random.randint(1, 6)
+    digit7 = random.randint(1, 6)
+    four_digit_code = str(digit4) + str(digit5) + str(digit6) + str(digit7) # combine four random digits
 
+    #print code
     print("3-digit code: ", three_digit_code)
+    print("4-digit code: ", four_digit_code)
 
 def main():
     while True:
