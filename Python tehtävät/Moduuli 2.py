@@ -1,16 +1,19 @@
 import math
 
+#Tehtävä 1
 def greet_user():
     #Asks for user input
     user = input("Enter your name: ")
     print("Hello " + user + "!")
 
+#Tehtävä 2
 def circle_area():
     #Asks user to enter radius
     radius = float(input("Enter a radius: "))
     area = math.pi * radius ** 2
     print("The area is: " + str(area))
 
+#Tehtävä 3
 def rectangle_perimeter():
     height = float(input("Enter height: "))
     length = float(input("Enter length: "))
@@ -18,24 +21,36 @@ def rectangle_perimeter():
     area = (height + length) * 2
     print(f"{height} + {length} x 2 is: {str(area)}")
 
+#Tehtävä 4
 def add_values():
-    pass
+    int1 = int(input("Enter first number: "))
+    int2 = int(input("Enter second number: "))
+    int3 = int(input("Enter third number: \n"))
+
+    total_sum = int1 + int2 + int3
+    times = int1 * int2 * int3
+    average = total_sum / 3
+
+    print(f"SUM\n{int1} + {int2} + {int3} is: {str(total_sum)}")
+    print(f"TIMES\n{int1} x {int2} x {int3} is: {str(times)}")
+    print(f"AVERAGE\n{total_sum} / 3 is: {str(average)}")
+
 def mass_converter():
     pass
 def random_generator():
     pass
 def main():
     while True:
-        print("\nChoose a task:")
-        print("1: Greet the user")
+        print("\nChoose a task number from 1 to 6, or select 7 to exit: ")
+        print("1: Greets the user")
         print("2: Calculate the area of a circle")
-        print("3: Calculate rectangle height")
-        print("4: Add two numbers")
+        print("3: Calculate rectangle perimeter")
+        print("4: Sums, times and average of three integer")
         print("5: Convert medieval mass units")
-        print("6: Generate a random number")
+        print("6: Generate a random number\n")
         print("7: Exit")
 
-        choice = input("Enter 1-7: ")
+        choice = input("Choose a number from 1 to 6: ")
 
         if choice == "1":
             greet_user()
