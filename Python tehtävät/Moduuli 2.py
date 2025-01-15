@@ -1,4 +1,5 @@
 import math
+import random
 
 #Tehtävä 1
 def greet_user():
@@ -58,7 +59,14 @@ def mass_converter():
     print(f"The weight in modern units:\n{kg} kilograms and {grams:.2f} grams.")
 
 def random_generator():
-    pass
+    digit1 = random.randint(0, 9)
+    digit2 = random.randint(0, 9)
+    digit3 = random.randint(0, 9)
+
+    three_digit_code = digit1 + digit2 + digit3 # combine random digits
+
+    print("3-digit code: ", three_digit_code)
+
 def main():
     while True:
         print("\nChoose a task number from 1 to 6, or select 7 to exit: ")
