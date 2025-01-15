@@ -1,7 +1,9 @@
+fish_limit = 42
+zander_cm = int(input("What is the length of Zander in Centimeters: "))
 
-CM = int(input("What is the length of Zander in Centimeters: "))
 
-if CM >= 42:
+if zander_cm >= fish_limit:
     print("Good Catch ")
 else:
-    print("Release Zander fish is over ")
+    below_limit = fish_limit - zander_cm
+    print(f"Release Zander fish is {below_limit} below size limit")
