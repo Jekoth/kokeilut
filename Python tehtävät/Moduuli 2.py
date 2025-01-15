@@ -25,7 +25,7 @@ def rectangle_perimeter():
 def add_values():
     int1 = int(input("Enter first number: "))
     int2 = int(input("Enter second number: "))
-    int3 = int(input("Enter third number: \n"))
+    int3 = int(input("Enter third number: "))
 
     total_sum = int1 + int2 + int3
     times = int1 * int2 * int3
@@ -38,19 +38,24 @@ def add_values():
 def mass_converter():
     int1 = int(input("Enter talents: "))
     int2 = int(input("Enter pounds: "))
-    int3 = float(input("Enter lots: \n"))
+    int3 = float(input("Enter lots: "))
 
     talent = 20 #pounds
     pound = 32 #lots
     lot = 13.3 #grams
 
     #conver to grams
-    gram = (
+    total_grams = (
         int1 * talent * pound * lot +
         int2 * pound * lot +
         int3 * lot
     )
-    print(f"The weight in modern units:\n kilograms and grams.")
+
+    #convert to kg
+    kg = int(total_grams / 1000)
+    grams = (total_grams % 1000)
+
+    print(f"The weight in modern units:\n{kg} kilograms and {grams:.2f} grams.")
 
 def random_generator():
     pass
