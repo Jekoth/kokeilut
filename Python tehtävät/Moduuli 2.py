@@ -36,7 +36,16 @@ def add_values():
     print(f"AVERAGE\n{total_sum} / 3 is: {str(average)}")
 
 def mass_converter():
-    pass
+    int1 = int(input("Enter talents: "))
+    int2 = int(input("Enter pounds: "))
+    int3 = int(input("Enter lots: \n"))
+
+    talent = 20 #pounds
+    pound = 32 #lots
+    lot = 13.3 #grams
+
+    print(f"The weight in modern units:\n kilograms and grams.")
+
 def random_generator():
     pass
 def main():
