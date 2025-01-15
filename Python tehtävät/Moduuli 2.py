@@ -38,12 +38,18 @@ def add_values():
 def mass_converter():
     int1 = int(input("Enter talents: "))
     int2 = int(input("Enter pounds: "))
-    int3 = int(input("Enter lots: \n"))
+    int3 = float(input("Enter lots: \n"))
 
     talent = 20 #pounds
     pound = 32 #lots
     lot = 13.3 #grams
 
+    #conver to grams
+    gram = (
+        int1 * talent * pound * lot +
+        int2 * pound * lot +
+        int3 * lot
+    )
     print(f"The weight in modern units:\n kilograms and grams.")
 
 def random_generator():
