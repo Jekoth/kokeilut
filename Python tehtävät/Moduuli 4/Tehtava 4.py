@@ -1,14 +1,15 @@
 import random
 
-num = random.randint(1, 10)
+random_num = random.randint(1, 10)
 
 guess_num = int(input("Guess the number between 1-10: "))
 
-while num != guess_num:
-    if guess_num < num:
+while random_num != guess_num: #Loop continues as long as guess number is not equal to the random number
+    if guess_num < random_num:
         print("Too low ")
-    elif guess_num > num:
+    elif guess_num > random_num:
         print("Too high ")
-    else:
-     break
-print("Correct! ")
+
+    guess_num = int(input("Try again: "))
+
+print("Correct! ", random_num)
