@@ -8,3 +8,7 @@ def calculate_diameter_price(diameter, price):
     unit_price = price / square_meters    # calculates unit price per square meter
     return unit_price
 
+#main
+
+#get first and second pizza input
+# compares better value per square meter
