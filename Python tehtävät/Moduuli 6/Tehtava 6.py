@@ -16,11 +16,15 @@ def main():
     diameter2 = int(input("Enter the diameter of the first pizza in cm: "))
     price2 = int(input("Enter the price of the first pizza in euros: "))
 
+    #calculates pizza price and diameter for both pizzas using function
+    pizza1_price = calculate_diameter_price(diameter1, price1)
+    pizza2_price = calculate_diameter_price(diameter2, price2)
+
 
     # compares better value per square meter
-    if price1 < price2:
+    if pizza1_price < pizza2_price:
         print("First pizza is better value")
-    elif price1 > price2:
+    elif pizza1_price > pizza2_price:
         print("Second pizza is better value")
     else:
         print("Both pizzas have same value")
