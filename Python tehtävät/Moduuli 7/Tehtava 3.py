@@ -1,28 +1,30 @@
-import os
-
-def clear_screen():
-    # Clears the screen based on the OS
-    os.system('cls' if os.name == 'nt' else 'clear')
-
 lentoasemat = {"EFHK": "Helsinki-Vantaa", "EDDF": "Frankfurt"}
 
 while True:
     try:
-        clear_screen()
-        print("1: Syötä uusi lentoasema")
+
+        print("\n1: Syötä uusi lentoasema")
         print("2: Hae lentoasema ICAO-koodilla")
         print("3: Lopeta")
 
         valinta = input("Valitse numero 1-3: ")
 
-        if valinta == "1":
-            print(f"Syötä ICAO-koodi: ")
-            print(f"Syötä lentoaseman nimi: ")
-        elif valinta == "2":
-            print("Syötä ICAO-koodi haettavalle lentoasemalle: ")
-        else:
+        if valinta == "1":#Lisää lentoasema sanakirjaan
+            icao_koodi = input(f"Syötä ICAO-koodi: ")
+            lentoasema = input(f"Syötä lentoaseman nimi: ")
+            lentoasemat[icao_koodi] = lentoasema
+            print("Lentoasema lisätty")
+        elif valinta == "2":#Etsii onko lentoasema sanakirjassa
+            icao_koodi = input("Syötä ICAO-koodi haettavalle lentoasemalle: ")
+            if icao_koodi in lentoasemat:
+                print(f"Lentoaseman nimi: {lentoasemat[icao_koodi]}")
+            else:
+                print("Lentoasemaa ei löydy.")
+        elif valinta == "3":#Lopettaa ohjelman
             print("Ohjelma on lopetettu")
             break
+        else:
+            print("Valitse numero 1-3")
 
     except ValueError:
-        print("Error")
+        print("Error!")
