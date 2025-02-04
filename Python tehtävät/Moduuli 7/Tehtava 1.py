@@ -6,7 +6,7 @@ while True:
         kuukaudennumero = int(input("Anna kuukauden järjestysnumero (1-12): "))
 
         if 1 <= kuukaudennumero <= 12:
-                vuodenaika = vuodenajat[kuukaudennumero-1]
+                vuodenaika = vuodenajat[kuukaudennumero-1] #Gets the season by subtracting 1 from the month number to adjust for 0 based indexing
                 print (f"Kuukausi {kuukaudennumero} on {vuodenaika}.")
                 break
         else:
