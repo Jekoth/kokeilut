@@ -24,7 +24,7 @@ yhteys.close()
 
 #Searches for database and prints data
 if tulokset:
-    print(f"Airports in country {country_code} by type:")
+    print(f"Airports in country {country_code} by type: ")
     for airport_type, count in tulokset:
         print(f"{airport_type}: {count}")
 else:
