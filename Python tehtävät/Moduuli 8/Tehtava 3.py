@@ -18,7 +18,7 @@ def hae_koordinaatit(icao_code):
     result = cursor.fetchone()
     cursor.close()
     if result:
-        return (result[0], result[1])
+        return result[0], result[1]
     else:
         return None
 
@@ -31,6 +31,10 @@ koord2 = hae_koordinaatit(icao2)
 
 # Fetch the coordinates of both airports
 if koord1 and koord2:
+    print(f"Coordinates for {icao1}: {koord1}")
+    print(f"Coordinates for {icao2}: {koord2}")
+
+    # Calculate the distance between the two airports
     etaisyys = geodesic(koord1, koord2).kilometers
     print(f"Lentokenttien {icao1} ja {icao2} välinen etäisyys on {etaisyys:.2f} kilometriä.")
 else:
