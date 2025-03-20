@@ -6,7 +6,7 @@ class Elevator:
 
     def go_to_floor(self, target_floor):
         if target_floor < self.bottom_floor or target_floor > self.top_floor:
-            print(f"Floor {target_floor} is out of range!")
+            print(f"Floor {target_floor} is out of range for Elevator at floor {self.cur_floor}!")
             return
 
         while self.cur_floor < target_floor:
@@ -47,7 +47,8 @@ class Building:
 
     def fire_alarm(self):
         print("Fire alarm activated! Moving all elevators to the bottom floor...")
-        for elevator in self.elevators:
+        for i, elevator in enumerate(self.elevators):
+            print(f"Moving Elevator {i + 1} to the bottom floor...")
             elevator.go_to_floor(self.bottom_floor)
 
 if __name__ == "__main__":
